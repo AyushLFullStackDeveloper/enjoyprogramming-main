@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enjoy Programming</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo/ep-logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-5AZdO4K8XmtNzXZGhXYmC/Tb0mQm67X7Dh7QKXv6ej3qLJgNpZ4rCkS6oRanf5cj6eOefA1bZ2ewzaKBiV5wTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../helper/styleswitchers.css" />
+    <style>
+      .main-div {
+        width: 100vw;
+        height: 90vh;
+        background-color: #30303000;
+        color: var(--theme-color) !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .html-div {
+        background-color: #7c7c7c45;
+        color: var(--theme-color) !important;
+        width: 20%;
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif, Tahoma, Verdana, Geneva;
+        margin: 10px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .html-div:hover {
+        background-color: #393939;
+        border: solid #2196f3;
+        transform: translateY(-5px);
+        /* Moves the button up by 5px on hover */
+      }
+
+      .icon {
+        width: 45px;
+        height: 45px;
+        margin-top: 15%;
+      }
+
+      .icon-css {
+        width: 55px;
+        height: 55px;
+        margin-top: 15%;
+      }
+
+      .top-div {
+        width: 100%;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif, Tahoma, Verdana, Geneva;
+      }
+
+      .bottom-div {
+        width: 100%;
+        height: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif, Tahoma, Verdana, Geneva;
+      }
+
+      .logo-style {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        border-radius: 50%;
+      }
+
+      h2 {
+        font-size: 22px;
+        color: var(--theme-color) !important;
+        text-align: center;
+        font-family: sans-serif, Tahoma, Verdana, Geneva;
+      }
+
+      @media (max-width: 480px) {
+        .html-div {
+          width: 55%;
+          height: 15%;
+        }
+
+        .icon {
+          width: 35px;
+          /* Adjust icon size for mobile */
+          height: 35px;
+          margin-top: 20px;
+        }
+
+        .icon-css {
+          width: 40px;
+          /* Adjust icon size for mobile */
+          height: 40px;
+          margin-top: 20px;
+        }
+
+        h2 {
+          font-size: 12px;
+          color: var(--theme-color) !important;
+        }
+      }
+    </style>
+    <script>
+      function onHTMLclick(type) {
+        if (type == 0) {
+          window.location.href = "./quiz/ep-quiz.html?quiz=html";
+        } else if (type == 1) {
+          window.location.href = "./quiz/ep-quiz.html?quiz=css";
+        } else if (type == 2) {
+          window.location.href = "./quiz/ep-quiz.html?quiz=communication";
+        }else {
+          window.location.href = "./quiz/ep-quiz.html?quiz=js";
+        }
+      }
+      function onGITHUBCLick() {
+        window.location.href =
+          "https://github.com/EnjoyProgrammingAdmin/html-project1";
+      }
+    </script>
+  </head>
+
+  <body style="margin: 0px; background-color: #1b424200">
+    <div class="main-div">
+      <div class="top-div font-family-primary" onclick="onHTMLclick()">
+        <img src="../assets/logo/resized-logo.jpeg" class="logo-style" />
+        <h2>ENJOY PROGRAMMING</h2>
+      </div>
+      <div class="bottom-div font-family-primary">
+        <div class="html-div" onclick="onHTMLclick(0)">
+          <img
+            src="../assets/images/icons/html-logo.png"
+            class="icon"
+            alt="HTML Icon"
+          />
+          <h2 style="color: var(--theme-color);">HTML</h2>
+        </div>
+        <div class="html-div" onclick="onHTMLclick(1)">
+          <img
+            src="../assets/images/icons/css-logo.png"
+            class="icon-css"
+            alt="CSS Icon"
+          />
+          <h2>CSS</h2>
+        </div>
+        <div class="html-div" onclick="onHTMLclick(3)">
+          <img
+            src="../assets/images/icons/js-logo.png"
+            class="icon"
+            alt="JavaScript Icon"
+          />
+          <h2>JavaScript</h2>
+        </div>
+        <div class="html-div" onclick="onHTMLclick(2)">
+          <img
+            src="https://cdn-icons-png.freepik.com/512/9564/9564944.png"
+            class="icon"
+            alt="Communication Icon"
+          />
+          <h2>Communication Skills</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
